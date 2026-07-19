@@ -1,0 +1,241 @@
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main {
+    width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 120px;
+    margin-bottom: 120px;
+}
+
+.faq-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+}
+
+.faq-headline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 24px;
+}
+
+.faq-headline>img {
+    width: 48px;
+    height: 48px;
+}
+
+.faq-content{
+    width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.faq-item{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 16px 14px;
+    gap: 8px;
+    border-radius: 12px;
+    background-color: rgba(241, 201, 83, 1);
+}
+
+.faq-item-sum{
+    font-family: var(--maintextfamily);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: rgba(84, 55, 13, 1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-item >p{
+    font-family: var(--maintextfamily);
+    font-size: 1rem;
+    color: rgba(54, 53, 52, 1);
+    padding: 4px 10px;
+    background-color: white;
+    border-radius:5px;
+}
+
+.faq-sum img{
+    width: 24px;
+    height: auto;
+}
+
+.faq-item:open .faq-item-sum img{
+    rotate: 180deg;
+}
+
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.contact-section-head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 56px;
+}
+
+.contact-section-headline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 24px;
+}
+
+.contact-section-headline>img {
+    width: 48px;
+    height: 48px;
+}
+
+.contact-section-head>p {
+    font-family: var(--maintextfamily);
+    font-size: 1.5rem;
+    color: rgba(84, 55, 13, 1);
+    font-weight: 500;
+}
+
+.contact-form-input {
+    width: 1100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.contact-form-input label {
+    font-family: var(--maintextfamily);
+    font-size: 1.5rem;
+    color: rgba(84, 55, 13, 1);
+    font-weight: 500;
+}
+
+.contact-form-input input[type=text] {
+    border: none;
+    border-bottom: 1px solid rgba(84, 55, 13, 1);
+    width: 100%;
+    margin: 17px 0px;
+    font-family: var(--inputtextfamily);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.cfi-container {
+    flex: 1 0 120px;
+}
+
+.cfi-row {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+}
+
+.cfi-check {
+    display: flex;
+    gap: 1rem;
+    padding-bottom: 1.5rem;
+}
+
+.cfi-check p {
+    font-family: var(--maintextfamily);
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgba(84, 55, 13, 1);
+}
+
+.cfi-send {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.cfi-send button {
+    width: 139px;
+    height: 48px;
+    border-radius: 40px;
+    background-color: transparent;
+    border: 1px solid rgba(48, 48, 48, 0.5);
+
+    font-family: var(--headlinefontfamily);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: rgba(115, 115, 115, 1);
+}
+
+.foot {
+    height: 152px;
+    width: 100%;
+    background-color: rgba(78, 164, 135, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.foot-content {
+    width: 1440px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.foot-content-left {
+    display: flex;
+    align-items: center;
+    gap: 72px;
+}
+
+.foot-content-left-copyright {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.foot-content-left-copyright p {
+    font-family: var(--foottextfamily);
+    font-size: 1rem;
+    color: white;
+}
+
+.foot-content-left a {
+    font-family: var(--foottextfamily);
+    font-size: 1rem;
+    color: white;
+}
+
+.foot-content-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.foot-content-right img {
+    height: 32px;
+    width: 100%;
+    transition: all 250ms ease-in-out;
+}
+
+.foot-content-right img:hover {
+    width: 120%;
+    height: 120%;
+}
