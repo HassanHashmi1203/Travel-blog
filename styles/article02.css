@@ -1,18 +1,78 @@
-p{
+p {
     font-family: Palanquin;
     font-size: 1rem;
     color: rgba(61, 61, 61, 1);
 }
 
-.a2content{
+.a2content {
+    width: 1200px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.a2content-top{
+.a2content-top {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 48px;
+}
+
+.a2content-top>p {
+    font-family: palanquin;
+    font-size: 1.5rem;
+    /* line-height: 1.3; */
+    color: rgba(61, 61, 61, 1);
+}
+
+.a2content-video {
+    width: 1200px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 137px 137px;
+}
+
+.a2content-video img:first-child {
+    position: relative;
+    width: 930px;
+    height: 520px;
+    border-radius: 53px;
+    overflow: hidden
+}
+
+.a2content-video img:last-child {
+    position: absolute;
+}
+
+.a2content-middle>p {
+    font-family: palanquin;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color: rgba(61, 61, 61, 1);
+    padding: 16px 0px;
+}
+
+.a2content-middle-list {
+    margin: 16px 0px;
+}
+
+.a2content-middle-list>li {
+    font-family: palanquin;
+    font-size: 1.5rem;
+    line-height: 1.3;
+    color: rgba(61, 61, 61, 1);
+}
+
+.a2content-middle-list>li::marker {
+    font-size: 0.8rem;
+}
+
+.a2content-middle-list span {
+    font-family: palanquin;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.3;
+    color: rgba(61, 61, 61, 1);
 }

@@ -41,11 +41,13 @@ h4{
 }
 
 .headarticle-left{
-    width: 900px;
+    flex: 1 0 900px;
+    /* width: 900px; */
     height: 390px;
     display:flex;
     flex-direction: column;
     gap: 0.5rem;
+    
 }
 .headarticle-left h1{
     color: rgba(241, 201, 83, 1);
@@ -61,8 +63,9 @@ h4{
 
 .headarticle-foot{
     display: flex;
-    justify-content:left;
+    justify-content: left;
     gap: 32px;
+    padding-top: 16px;
 }
 .headarticle-footelement{
     display: flex;
