@@ -38,15 +38,14 @@ h4 {
 }
 
 .headarticle {
-    height: 390px;
+    /* height: 390px; */
     display: flex;
     justify-content: space-between;
 }
 
 .headarticle-left {
-    flex: 1 0 900px;
-    /* width: 900px; */
-    height: 390px;
+    flex: 1 1 900px;
+    /* height: 390px; */
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -125,7 +124,7 @@ h4 {
 }
 
 .protipps-text {
-    width: 1080px;
+    /* width: 1080px; */
     background-color: rgba(78, 164, 135, 0.2);
     border-radius: 30px;
     padding: 26px 16px;
