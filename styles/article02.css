@@ -10,12 +10,13 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     gap: 88px;
+    padding: 16px 24px 48px 24px;
 }
 
 .a2content-top {
     display: flex;
-    flex-direction: column;
     align-items: center;
     gap: 48px;
 }
@@ -36,8 +37,8 @@ p {
 
  .a2content-video video {
     position: relative;
-    width: 930px;
-    height: 520px;
+    max-width: 930px;
+    aspect-ratio: 33%;
     border-radius: 53px;
 } 
 
@@ -85,3 +86,11 @@ p {
     }
 
 } */
+
+@media screen and (max-width:768px) {
+    
+.a2content-top>p {
+    font-size: 1rem;
+    line-height: 1.3;
+}
+}
