@@ -31,7 +31,7 @@ nav {
   gap: 72px;
 }
 
-.nav-links > a {
+.nav-links>a {
   text-decoration: none;
   color: #f8f5eb;
   font-family: "Arima";
@@ -122,7 +122,7 @@ main {
   margin-bottom: 24px;
 }
 
-.faq-headline > img {
+.faq-headline>img {
   width: 48px;
   height: 48px;
 }
@@ -155,7 +155,7 @@ main {
   align-items: center;
 }
 
-.faq-item > p {
+.faq-item>p {
   font-family: var(--maintextfamily);
   font-size: 1rem;
   color: rgba(54, 53, 52, 1);
@@ -196,12 +196,12 @@ main {
   margin-bottom: 24px;
 }
 
-.contact-section-headline > img {
+.contact-section-headline>img {
   width: 48px;
   height: 48px;
 }
 
-.contact-section-head > p {
+.contact-section-head>p {
   font-family: var(--maintextfamily);
   font-size: 1.5rem;
   color: rgba(84, 55, 13, 1);
@@ -278,12 +278,12 @@ main {
 }
 
 .foot {
-  height: 152px;
   width: 100%;
   background-color: rgba(78, 164, 135, 1);
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 60px 120px;
 }
 
 .foot-content {
@@ -341,7 +341,7 @@ main {
   height: 120%;
 }
 
-.foot-navigation{
+.foot-navigation {
   background-color: rgba(241, 201, 83, 1);
   display: none;
   justify-content: space-between;
@@ -350,8 +350,8 @@ main {
   padding: 24px;
 }
 
-.foot-navigation img{
-   height: 48px;
+.foot-navigation img {
+  height: 48px;
   width: 100%;
   transition: all 250ms ease-in-out;
 }
@@ -364,4 +364,22 @@ main {
 
 @media screen and (max-width:768px) {
 
+  .foot {
+    width: 100%;
+    padding: 30px 24px;
+  }
+
+  .foot-content-left {
+    flex-direction: column;
+    align-items: left;
+    gap: 8px;
+  }
+
+  .foot-content-left-links {
+    flex-direction: column;
+    display:flex;
+    align-items: left;
+    text-align: left;
+    gap: 8px;
+  }
 }
