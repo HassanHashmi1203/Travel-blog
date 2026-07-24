@@ -312,6 +312,12 @@ main {
   color: white;
 }
 
+.foot-content-left-links {
+  display: flex;
+  align-items: center;
+  gap: 72px;
+}
+
 .foot-content-left a {
   font-family: var(--foottextfamily);
   font-size: 1rem;
@@ -333,4 +339,29 @@ main {
 .foot-content-right img:hover {
   width: 120%;
   height: 120%;
+}
+
+.foot-navigation{
+  background-color: rgba(241, 201, 83, 1);
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  gap: 48px;
+  padding: 24px;
+}
+
+.foot-navigation img{
+   height: 48px;
+  width: 100%;
+  transition: all 250ms ease-in-out;
+}
+
+.foot-navigation img:hover {
+  width: 120%;
+  height: 120%;
+}
+
+
+@media screen and (max-width:768px) {
+
 }
