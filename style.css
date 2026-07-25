@@ -342,12 +342,9 @@ main {
 }
 
 .foot-navigation {
+  width: 100%;
   background-color: rgba(241, 201, 83, 1);
   display: none;
-  justify-content: space-between;
-  align-items: center;
-  gap: 48px;
-  padding: 24px;
 }
 
 .foot-navigation img {
@@ -361,6 +358,22 @@ main {
   height: 120%;
 }
 
+@media screen and (min-width:768px)  and (max-width:1024px) {
+
+  .foot {
+    width: 100%;
+    padding: 60px 24px;
+  }
+
+  .foot-content-left {
+    gap: 24px;
+  }
+
+  .foot-content-left-links {
+    gap: 24px;
+  }
+}
+
 
 @media screen and (max-width:768px) {
 
@@ -371,15 +384,22 @@ main {
 
   .foot-content-left {
     flex-direction: column;
-    align-items: left;
+    align-items: flex-start;
     gap: 8px;
   }
 
   .foot-content-left-links {
+    display: flex;
     flex-direction: column;
-    display:flex;
-    align-items: left;
-    text-align: left;
+    align-items: flex-start;
     gap: 8px;
   }
+
+  .foot-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 48px;
+  padding: 24px;
+}
 }

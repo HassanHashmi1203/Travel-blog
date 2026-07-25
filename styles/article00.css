@@ -24,12 +24,18 @@
 
 .headarticle-left h1 {
   color: rgba(241, 201, 83, 1);
+  font-size: clamp(2.5rem, 0.25rem + 6vw, 4rem);
+  line-height: 1.15;
+}
+
+.headarticle-left h4 {
+  font-size: clamp(1.25rem, -0.625rem + 5vw, 2.5rem);
   line-height: 1.15;
 }
 
 .headarticle-left p {
   font-family: palanquin;
-  font-size: 1.75rem;
+  font-size: clamp(1rem, -0.125rem + 3vw, 1.75rem);
   line-height: 1.3;
   color: rgba(84, 55, 13, 1);
 }
@@ -112,14 +118,14 @@
 
 .protipps-text li {
   font-family: palanquin;
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 0.25rem + 2vw, 1.5rem);
   line-height: 1.5;
   color: rgba(61, 61, 61, 1);
 }
 
 .protipps-text span {
   font-family: palanquin;
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 0.25rem + 2vw, 1.5rem);
   font-weight: 700;
   line-height: 1.5;
   color: rgba(78, 164, 135, 1);
@@ -154,26 +160,30 @@
 
 .followme {
   position: relative;
+  border: 1px solid black;
+  padding: 4px;
 }
 
 .followme-content {
-  width: 500px;
+  max-width: clamp(300px, 140px + 40vw, 500px);
+  border: 1px solid rgb(162, 19, 19);
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 48px;
+  padding: 8px 24px;
 }
 
 .followme-content>p {
   font-family: arima;
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 0.25rem + 2vw, 1.5rem);
   font-weight: 500;
   color: rgba(84, 55, 13, 1);
   text-align: center;
 }
 
 .followme-button {
-  width: 160px;
+  max-width: 160px;
   height: 48px;
   display: flex;
   justify-content: center;
@@ -181,6 +191,7 @@
   background-color: rgba(78, 164, 135, 1);
   border-radius: 40px;
   gap: 8px;
+  padding: 4px 24px;
 }
 
 .followme-button>p {
@@ -191,8 +202,37 @@
 }
 
 .followme>img {
+  border: 1px solid orange;
   position: absolute;
   top: 60px;
+  left: 20px;
+  width: clamp(40px, 0px + 10vw, 90px);
+  height: 100px;
+}
+
+.followme-button-pressed {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 16px;
+}
+
+.followme-button-pressed img {
+  padding-left: 16px;
+}
+
+.followme-button-pressed nav {
+  display: flex;
+  flex-direction: column;
+  align-items:flex-start;
+  gap: 4px;
+  padding: 4px 8px;
+}
+
+.followme-button-pressed nav a{
+  font-family: arima;
+  font-size: 1rem;
+  color: rgba(78, 164, 135, 1);
 }
 
 @media screen and (min-width:768px) and (max-width:1200px) {
@@ -210,16 +250,6 @@
     align-items: left;
     gap: 0.5rem;
     padding: 16px 32px;
-  }
-
-  .headarticle-left h1 {
-    font-size: 3rem;
-    line-height: 1.15;
-  }
-
-  .headarticle-left>p {
-    font-size: 1.5rem;
-    line-height: 1.3;
   }
 
   .headarticle-right {
@@ -245,29 +275,20 @@
     padding: 16px 32px;
   }
 
-  .headarticle-left h1 {
-    font-size: 2.5rem;
-    line-height: 1.15;
-  }
-
-  .headarticle-left h4 {
-    font-size: 1.25rem;
-    line-height: 1.15;
-  }
-
-  .headarticle-left>p {
-    font-size: 1rem;
-    line-height: 1.3;
-  }
-
   .headarticle-foot {
     flex-direction: column;
     justify-content: left;
     gap: 12px;
-padding-bottom: 16px;
+    padding-bottom: 16px;
   }
 
   .headarticle-right {
     width: 300px;
   }
+.followme-content {
+
+  gap: 24px;
+  padding: 8px 24px;
+}
+
 }
