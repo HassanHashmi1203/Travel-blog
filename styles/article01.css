@@ -1,0 +1,43 @@
+.a1-container {
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.a1-headline {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.a1-headline > h1 {
+  color: #f1c953;
+  line-height: 1.25;
+}
+
+.a1-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.a1-span {
+  font-size: 32px;
+}
+
+.a1-info {
+  display: flex;
+  justify-content: flex-start;
+  gap: 32px;
+}
+
+.a1-headline-icon {
+  display: flex;
+  gap: 6px;
+}
+
+.a1-headline-icon > img {
+  width: 15px;
+  height: 15px;
+}

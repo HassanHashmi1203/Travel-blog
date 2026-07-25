@@ -4,6 +4,15 @@ body {
   align-items: center;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
 header {
   background-color: #4ea487;
   height: 130px;
@@ -31,7 +40,7 @@ nav {
   gap: 72px;
 }
 
-.nav-links>a {
+.nav-links > a {
   text-decoration: none;
   color: #f8f5eb;
   font-family: "Arima";
@@ -96,6 +105,106 @@ nav {
   max-width: 21ch;
 }
 
+.highlight-section {
+  padding-top: 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 88px;
+}
+
+.some-headline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  text-align: center;
+}
+
+.highlight-container {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 8px;
+}
+
+.highlight-section > img {
+  width: 40px;
+  height: 40px;
+}
+
+.highlight-headline > p {
+  font-size: 24px;
+  font-family: var(--maintextfamily);
+  font-weight: 500;
+  color: #54370d;
+}
+
+.slider-a {
+  position: relative;
+  background-image: url(assets/img/highlight.png);
+  width: 1200px;
+  height: 530px;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.slider-a input {
+  z-index: 2;
+}
+
+.slider-a-wrapper {
+  z-index: 1;
+  width: 400%;
+  height: 100%;
+
+  position: absolute;
+  display: flex;
+
+  transition: all 1s ease-in-out;
+}
+
+.slider-a-element {
+  width: calc(100% / 4);
+  height: 100%;
+}
+
+.element-one {
+  /* background-image: url(assets/img/header\ photo.png); */
+  background-color: gold;
+}
+
+.element-two {
+  /* background-image: url(assets/img/scandinavia.jpg); */
+  background-color: #4ea487;
+}
+
+.element-three {
+  /* background-image: url(assets/img/header\ photo.png); */
+}
+
+.element-four {
+  /* background-image: url(assets/img/Video.png); */
+}
+
+.slider-a input [value="one"]:checked ~ .slider-a-wrapper {
+  transform: translateX(calc(100% / 4));
+}
+
+.slider-a input [value="two"]:checked ~ .slider-a-wrapper {
+  transform: translateX(0);
+}
+
+.slider-a input [value="three"]:checked ~ .slider-a-wrapper {
+  transform: translateX(calc(-100% / 4));
+}
+
+.slider-a input [value="four"]:checked ~ .slider-a-wrapper {
+  transform: translateX(calc(-200% / 4));
+}
+
 main {
   width: 100%;
   max-width: 1200px;
@@ -123,12 +232,12 @@ main {
   margin-bottom: 24px;
 }
 
-.faq-headline>img {
+.faq-headline > img {
   width: clamp(40px, 28px + 2.5vw, 48px);
   height: auto;
 }
 
-.faq-headline>h2 {
+.faq-headline > h2 {
   font-family: arima;
   font-size: clamp(2.5rem, 1.25rem + 4vw, 3.25rem);
   color: rgba(78, 164, 135, 1);
@@ -163,7 +272,7 @@ main {
   align-items: center;
 }
 
-.faq-item>p {
+.faq-item > p {
   font-family: var(--maintextfamily);
   font-size: 1rem;
   color: rgba(54, 53, 52, 1);
@@ -205,12 +314,12 @@ main {
   margin-bottom: 24px;
 }
 
-.contact-section-headline>img {
+.contact-section-headline > img {
   width: clamp(40px, 28px + 2.5vw, 48px);
   height: auto;
 }
 
-.contact-section-headline>h2 {
+.contact-section-headline > h2 {
   font-family: arima;
   font-size: clamp(2.5rem, 1.25rem + 4vw, 3.25rem);
   color: rgba(78, 164, 135, 1);
@@ -221,10 +330,10 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
 }
 
-.contact-section-description>p {
+.contact-section-description > p {
   font-family: var(--maintextfamily);
   font-size: 1.5rem;
   color: rgba(84, 55, 13, 1);
@@ -381,8 +490,7 @@ main {
   height: 120%;
 }
 
-@media screen and (min-width:768px)  and (max-width:1024px) {
-
+@media screen and (min-width: 768px) and (max-width: 1024px) {
   .foot {
     width: 100%;
     padding: 60px 24px;
@@ -397,14 +505,13 @@ main {
   }
 }
 
-
-@media screen and (max-width:768px) {
-.contact-section-description{
-  display: none;
-}
-.cfi-row {
- flex-direction: column;
-}
+@media screen and (max-width: 768px) {
+  .contact-section-description {
+    display: none;
+  }
+  .cfi-row {
+    flex-direction: column;
+  }
 
   .foot {
     width: 100%;
@@ -425,12 +532,12 @@ main {
   }
 
   .foot-navigation {
-  display: flex;
-  position: fixed;
-  bottom: 0;
-  justify-content: space-between;
-  align-items: center;
-  gap: 48px;
-  padding: 24px;
-}
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    justify-content: space-between;
+    align-items: center;
+    gap: 48px;
+    padding: 24px;
+  }
 }
