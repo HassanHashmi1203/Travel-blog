@@ -1,3 +1,7 @@
+.header-a1 {
+  margin-bottom: 80px;
+}
+
 .a1-container {
   padding-top: 80px;
   display: flex;
@@ -40,4 +44,137 @@
 .a1-headline-icon > img {
   width: 15px;
   height: 15px;
+}
+
+.headarticle-right {
+  width: 272px;
+  background-color: rgba(78, 164, 135, 0.2);
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+  gap: 16px;
+}
+
+.headarticle-right p:first-child {
+  font-family: arima;
+  font-size: 1.15rem;
+  line-height: 1.1;
+  font-weight: 700;
+  color: rgba(84, 55, 13, 1);
+  text-align: center;
+}
+
+.headarticle-right p:nth-child(2) {
+  font-family: arima;
+  font-size: 1.15rem;
+  line-height: 1.1;
+  color: rgba(84, 55, 13, 1);
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.headarticle-right p:last-child {
+  font-family: palanquin;
+  font-size: 1rem;
+  line-height: 1.15;
+  color: rgba(84, 55, 13, 1);
+}
+
+.beach-destination-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.h3-a1 {
+  font-family: "Arima";
+  color: #54370d;
+  font-size: 32px;
+  font-weight: 600;
+  text-align: center;
+  padding-bottom: 64px;
+}
+
+.slider-b {
+  width: 1300px;
+  height: 440px;
+  display: flex;
+}
+
+.slider-one {
+  background-image: url(../assets/img/Rectangle\ 22.png);
+}
+
+.slider-two {
+  background-image: url(../assets/img/Rectangle\ 21.png);
+}
+
+.slider-three {
+  background-image: url(../assets/img/Rectangle\ 20.png);
+}
+
+.slider-four {
+  background-image: url(../assets/img/Rectangle\ 23.png);
+}
+
+.slider-five {
+  background-image: url(../assets/img/Rectangle\ 24.png);
+}
+
+.slider-b-element {
+  z-index: 1;
+  width: 300px;
+  height: 100%;
+  background-image: url(../assets/img/Rectangle\ 22.png);
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  transform: perspective(250px) rotateY(20deg) translateX(-20px);
+  transform-origin: 50% 50%;
+  transition: all 250ms ease-in-out;
+
+  border-radius: 16px;
+}
+
+.slider-b-element:hover {
+  z-index: 2;
+  transform: perspective(250px) rotateY(0deg) translateX(0px) scaleX(1.5)
+    scaleY(1.2);
+}
+
+.lorem-a1 {
+  font-family: "Palanquin";
+  font-weight: 400;
+  font-size: 24px;
+  color: #3d3d3d;
+  width: 1400px;
+}
+
+.lorem-head {
+  font-family: "Palanquin";
+  font-weight: 400;
+  font-size: 24px;
+  color: #3d3d3d;
+}
+
+li {
+  font-family: "Palanquin";
+  font-weight: 400;
+  font-size: 24px;
+  color: #3d3d3d;
+}
+
+.black {
+  color: #000000;
+  font-weight: bold;
+}
+
+.lorem-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
