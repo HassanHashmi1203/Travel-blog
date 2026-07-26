@@ -334,7 +334,7 @@ main {
 }
 
 .contact-section-description > p {
-  font-family: var(--maintextfamily);
+  font-family: palanquin;
   font-size: 1.5rem;
   color: rgba(84, 55, 13, 1);
   font-weight: 500;
@@ -378,8 +378,33 @@ main {
 
 .cfi-check {
   display: flex;
+  align-items: center;
   gap: 1rem;
   padding-bottom: 1.5rem;
+}
+
+.cfi-check input[type=checkbox]{
+   appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(84, 55, 13, 1);
+  border-radius: 2px;
+  background: #fff;
+}
+
+.cfi-check input[type=checkbox]:hover{
+   background: rgba(241, 201, 83, 1);
+}
+
+.cfi-check input[type=checkbox]:checked{
+   background: rgba(78, 164, 135, 1);
+}
+
+
+.cfi-check input[type="checkbox"]:checked::before {
+  content: url("./assets/icons/check.svg");
+  width: 15px;
+  height: 12px;
 }
 
 .cfi-check p {
@@ -439,7 +464,7 @@ main {
 }
 
 .foot-content-left-copyright p {
-  font-family: var(--foottextfamily);
+  font-family: palanquin;
   font-size: 1rem;
   color: white;
 }
@@ -451,12 +476,17 @@ main {
 }
 
 .foot-content-left a {
-  font-family: var(--foottextfamily);
+  font-family: palanquin;
   font-size: 1rem;
   color: white;
 }
 
+.foot-content-left a:hover {
+font-weight: bold;
+}
+
 .foot-content-right {
+  height: 40px;
   display: flex;
   align-items: center;
   gap: 16px;
@@ -515,7 +545,7 @@ main {
 
   .foot {
     width: 100%;
-    padding: 30px 24px;
+    padding: 30px 8px 130px 8px;
   }
 
   .foot-content-left {

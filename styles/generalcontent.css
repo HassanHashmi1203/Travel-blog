@@ -1,8 +1,10 @@
 main{
-    width: 800px;
+    width: 100%;
+    max-width: 1440px;
     display: flex;
     justify-content: left;
     gap: 32px;
+    padding: 16px 120px;
 }
 
 main p{
