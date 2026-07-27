@@ -77,6 +77,21 @@
   gap: 16px;
 }
 
+.headarticle-right-imgbox {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.author-img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+    object-position: 75% 65%;
+  transform: scale(1.15);
+}
+
 .headarticle-right p:first-child {
   font-family: arima;
   font-size: 1.15rem;
@@ -201,9 +216,9 @@
 
 .followme>img {
   position: absolute;
-  top: 60px;
+  top: clamp(20px, 0px + 10vw, 60px);
   left: 20px;
-  width: clamp(40px, 0px + 10vw, 90px);
+  width: clamp(40px, -40px + 12.5vw, 90px);
   height: 100px;
 }
 
@@ -283,9 +298,8 @@
     width: 300px;
   }
 .followme-content {
-
   gap: 24px;
-  padding: 8px 24px;
+  padding: 8px 4px;
 }
 
 }

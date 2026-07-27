@@ -49,12 +49,25 @@ p {
   width: clamp(20px, -40px + 15vw, 80px);
 }
 
+.a2content-middle {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
 .a2content-middle > p {
   font-family: palanquin;
   font-size: clamp(1rem, 0.25rem + 2vw, 1.5rem);
   line-height: 1.5;
   color: rgba(61, 61, 61, 1);
-  padding: 16px 0px;
+}
+
+.a2content-middle-listblock > p {
+  font-family: palanquin;
+  font-size: clamp(1rem, 0.25rem + 2vw, 1.5rem);
+  line-height: 1.5;
+  color: rgba(61, 61, 61, 1);
+  padding-bottom: 32px;
 }
 
 .a2content-middle-list {
