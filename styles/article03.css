@@ -69,6 +69,20 @@ p {
   transform: perspective(250px) rotateY(-18deg) translateX(20px) scale(1);
 }
 
+.a3content-radiobtn{
+  display: flex;
+  justify-content: center;
+}
+
+.a3content-radiobtn img {
+  width: 200px;
+  height: 390px;
+  object-fit: cover;
+  display: block;
+}
+
+
+
 .a3content-middle {
   display: flex;
   flex-direction: column;
@@ -125,4 +139,30 @@ p {
   font-size: clamp(1rem, 0.25rem + 2vw, 1.5rem);
   line-height: 1.3;
   color: rgba(61, 61, 61, 1);
+}
+
+@media screen and (min-width:768px) and (max-width:1200px) {
+.slider-element {
+  width: 200px;
+  height: 290px;
+}
+
+}
+
+@media screen and (max-width:768px) {
+
+.a3content-slidersection {
+ width: 600px;
+ justify-content: flex-start;
+  overflow: hidden;
+ }
+
+ .slider-element {
+  width: 200px;
+  height: 290px;
+  
+  transform: perspective(250px) rotateY(18deg) translate(-20px) scale(1);
+  transform-origin: 50% 50%;
+  transition: all 300ms ease-out;
+}
 }
