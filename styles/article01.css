@@ -101,39 +101,35 @@
   width: 1300px;
   height: 440px;
   display: flex;
+  justify-content: center;
 }
 
-.slider-one {
-  background-image: url(../assets/img/Rectangle\ 22.png);
+.slider1:hover ~ .slider-b-element {
+  transform: perspective(250px) rotateY(-20deg) translateX(-20px);
 }
 
-.slider-two {
-  background-image: url(../assets/img/Rectangle\ 21.png);
+.slider2:hover ~ .slider-b-element {
+  transform: perspective(250px) rotateY(-20deg) translateX(-20px);
 }
 
-.slider-three {
-  background-image: url(../assets/img/Rectangle\ 20.png);
+.slider3:hover ~ .slider-b-element {
+  transform: perspective(250px) rotateY(-20deg) translateX(-20px);
 }
 
-.slider-four {
-  background-image: url(../assets/img/Rectangle\ 23.png);
-}
-
-.slider-five {
-  background-image: url(../assets/img/Rectangle\ 24.png);
+.slider4:hover ~ .slider-b-element {
+  transform: perspective(250px) rotateY(-20deg) translateX(-20px);
 }
 
 .slider-b-element {
   z-index: 1;
-  width: 300px;
+  width: 250px;
   height: 100%;
-  background-image: url(../assets/img/Rectangle\ 22.png);
 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
-  transform: perspective(250px) rotateY(20deg) translateX(-20px);
+  transform: perspective(250px) rotateY(5deg) translateX(-20px);
   transform-origin: 50% 50%;
   transition: all 250ms ease-in-out;
 
