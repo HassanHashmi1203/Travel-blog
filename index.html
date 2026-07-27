@@ -12,43 +12,37 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 
-  <body>
+<body>
+  <section id="landing-section" class="landing-section">
+    <header>
+      <nav>
+        <a href="index.html"><img class="logo" src="assets/icons/logo.png" alt="blog-logo" /></a>
+        <div class="nav-links">
+          <a href="#highlight-section">Highlights</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </header>
+  </section>
+  <div class="content-section">
+    <div class="vector-container">
+      <img class="vector-icon" src="assets/icons/Vector 16 (1).png" alt="Vector-Icon-landing-page" />
+    </div>
     <a href="article01.html">Article1</a>
     <a href="article02.html">Article2</a>
     <a href="article03.html">Article3</a>
-    <section id="landing-section" class="landing-section">
-      <header>
-        <nav>
-          <a href="index.html"
-            ><img class="logo" src="assets/icons/logo.png" alt="blog-logo"
-          /></a>
-          <div class="nav-links">
-            <a href="#highlight-section">Highlights</a>
-            <a href="#faq">FAQ</a>
-            <a href="#contact">Contact</a>
-          </div>
-        </nav>
-      </header>
-    </section>
-    <div class="content-section">
-      <div class="vector-container">
-        <img
-          class="vector-icon"
-          src="assets/icons/Vector 16 (1).png"
-          alt="Vector-Icon-landing-page"
-        />
-      </div>
-      <div class="vector-text-container">
-        <h2>Cappadocia</h2>
-        <p class="landing-span">
-          From sunrise balloons to hidden cave dwellings, every moment feels
-          unreal in the best way.
-        </p>
-      </div>
-      <div>
-        <img class="circle-icon" src="assets/icons/Circle.png" alt="" />
-      </div>
+    <div class="vector-text-container">
+      <h2>Cappadocia</h2>
+      <p class="landing-span">
+        From sunrise balloons to hidden cave dwellings, every moment feels
+        unreal in the best way.
+      </p>
     </div>
+    <div>
+      <img class="circle-icon" src="assets/icons/Circle.png" alt="" />
+    </div>
+  </div>
 
   <main>
     <section id="highlight-section" class="highlight-section">
@@ -93,10 +87,7 @@
         <div class="faq-content">
           <details name="faq1" class="faq-item">
             <summary class="faq-item-sum">
-              What’s the story behind my travel blog?<img
-                src="./assets/icons/arrow_forward_ios.svg"
-                alt="arrow"
-              />
+              What’s the story behind my travel blog?<img src="./assets/icons/arrow_forward_ios.svg" alt="arrow" />
             </summary>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum,
@@ -107,10 +98,8 @@
           </details>
           <details name="faq1" class="faq-item">
             <summary class="faq-item-sum">
-              How do I plan, document, and share my travels?<img
-                src="./assets/icons/arrow_forward_ios.svg"
-                alt="arrow"
-              />
+              How do I plan, document, and share my travels?<img src="./assets/icons/arrow_forward_ios.svg"
+                alt="arrow" />
             </summary>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum,
@@ -122,10 +111,7 @@
           <details name="faq1" class="faq-item">
             <summary class="faq-item-sum">
               How can brands, companies, or fellow creators collaborate with me
-              or get in touch?<img
-                src="./assets/icons/arrow_forward_ios.svg"
-                alt="arrow"
-              />
+              or get in touch?<img src="./assets/icons/arrow_forward_ios.svg" alt="arrow" />
             </summary>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum,
@@ -136,10 +122,8 @@
           </details>
           <details name="faq1" class="faq-item">
             <summary class="faq-item-sum">
-              How can readers support this blog and the work behind it?<img
-                src="./assets/icons/arrow_forward_ios.svg"
-                alt="arrow"
-              />
+              How can readers support this blog and the work behind it?<img src="./assets/icons/arrow_forward_ios.svg"
+                alt="arrow" />
             </summary>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum,
@@ -162,38 +146,38 @@
             together.
           </p>
         </div>
-      </div>
-      <form class="contact-form-input" action="">
-        <div class="cfi-row">
-          <div class="cfi-container">
-            <label for="cfi-name">What's your name?</label><br />
-            <input type="text" id="cfi-name" name="cfi-name" />
-          </div>
-          <div class="cfi-container">
-            <label for="cfi-email">What's your email?</label><br />
-            <input type="text" id="cfi-email" name="cfi-email" />
-          </div>
         </div>
-        <div class="cfi-row">
-          <div class="cfi-container">
-            <label for="cfi-question">How can I help?</label><br />
-            <input type="text" id="cfi-question" name="cfi-question" />
+        <form class="contact-form-input" action="">
+          <div class="cfi-row">
+            <div class="cfi-container">
+              <label for="cfi-name">What's your name?</label><br />
+              <input type="text" id="cfi-name" name="cfi-name" />
+            </div>
+            <div class="cfi-container">
+              <label for="cfi-email">What's your email?</label><br />
+              <input type="text" id="cfi-email" name="cfi-email" />
+            </div>
           </div>
-        </div>
-        <div class="cfi-send">
-          <div class="cfi-check">
-            <input type="checkbox" id="cfi-check" name="cfi-check" />
-            <p>
-              I've read the
-              <a href="privacy policy.html" target="_blank">privacy policy</a>
-              and agree to the processing of my data as outlined.
-            </p>
+          <div class="cfi-row">
+            <div class="cfi-container">
+              <label for="cfi-question">How can I help?</label><br />
+              <input type="text" id="cfi-question" name="cfi-question" />
+            </div>
           </div>
+          <div class="cfi-send">
+            <div class="cfi-check">
+              <input type="checkbox" id="cfi-check" name="cfi-check" />
+              <p>
+                I've read the
+                <a href="privacy policy.html" target="_blank">privacy policy</a>
+                and agree to the processing of my data as outlined.
+              </p>
+            </div>
 
-          <button type="submit" value="Send">Send</button>
-        </div>
-      </form>
-    </section>
+            <button type="submit" value="Send">Send</button>
+          </div>
+        </form>
+      </section>
   </main>
   <footer class="foot">
     <div class="foot-content">
