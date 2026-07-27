@@ -12,34 +12,40 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 
-<body>
-  <section id="landing-section" class="landing-section">
-    <header>
-      <nav>
-        <img class="logo" src="assets/icons/logo.png" alt="blog-logo" />
-        <div class="nav-links">
-          <a href="#">Highlights</a>
-          <a href="#">FAQ</a>
-          <a href="#contact-section">Contact</a>
-        </div>
-      </nav>
-    </header>
+  <body>
+    <section id="landing-section" class="landing-section">
+      <header>
+        <nav>
+          <a href="index.html"
+            ><img class="logo" src="assets/icons/logo.png" alt="blog-logo"
+          /></a>
+          <div class="nav-links">
+            <a href="#highlight">Highlights</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </nav>
+      </header>
+    </section>
     <div class="content-section">
+      <div class="vector-container">
+        <img
+          class="vector-icon"
+          src="assets/icons/Vector 16 (1).png"
+          alt="Vector-Icon-landing-page"
+        />
+      </div>
       <div class="vector-text-container">
-        <img class="vector" src="assets/icons/Vector 16 (1).png" alt="vecator" />
-        <div class="headline">
-          <h2>Cappadocia</h2>
-          <p class="landing-span">
-            From sunrise balloons to hidden cave dwellings, every moment feels
-            unreal in the best way.
-          </p>
-        </div>
+        <h2>Cappadocia</h2>
+        <p class="landing-span">
+          From sunrise balloons to hidden cave dwellings, every moment feels
+          unreal in the best way.
+        </p>
       </div>
       <div>
-        <img class="circle" src="assets/icons/Circle.png" alt="türkey-circle" />
+        <img class="circle-icon" src="assets/icons/Circle.png" alt="" />
       </div>
     </div>
-  </section>
 
   <main>
     <section id="highlight-section" class="highlight-section">
@@ -63,76 +69,90 @@
         <input type="radio" name="slider" value="four" />
 
         <div class="slider-a-wrapper">
-          <div class="slider-a-element element-one"></div>
-          <div class="slider-a-element element-two"></div>
-          <div class="slider-a-element element-three"></div>
+          <div class="slider-a-element element-one">
+            <img src="assets/img/Rectangle 20.png" alt="" />
+          </div>
+          <div class="slider-a-element element-two">
+            <img src="assets/img/Rectangle 21.png" alt="" />
+          </div>
+          <div class="slider-a-element element-three">
+            <img src="assets/img/Rectangle 23.png" alt="" />
+          </div>
           <div class="slider-a-element element-four"></div>
         </div>
       </div>
-    </section>
-<a href="article02.html">Artikel 2</a>
-<a href="article03.html">Artikel 3</a>
-    <section id="faq-section" class="faq-section">
-      <div class="faq-headline">
-        <img src="./assets/icons/live_help.png" alt="Icon live-help" />
-        <h2>FAQ</h2>
-      </div>
-      <div class="faq-content">
-        <details name="faq1" class="faq-item">
-          <summary class="faq-item-sum">
-            What’s the story behind my travel blog?<img src="./assets/icons/arrow_forward_ios.svg" alt="arrow" />
-          </summary>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum,
-            deserunt quis rem nesciunt suscipit atque laborum, molestias
-            doloribus obcaecati dicta natus itaque possimus nemo ducimus
-            labore? Ipsa, ea possimus. Eius.
-          </p>
-        </details>
-        <details name="faq1" class="faq-item">
-          <summary class="faq-item-sum">
-            How do I plan, document, and share my travels?<img src="./assets/icons/arrow_forward_ios.svg" alt="arrow" />
-          </summary>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum,
-            deserunt quis rem nesciunt suscipit atque laborum, molestias
-            doloribus obcaecati dicta natus itaque possimus nemo ducimus
-            labore? Ipsa, ea possimus. Eius.
-          </p>
-        </details>
-        <details name="faq1" class="faq-item">
-          <summary class="faq-item-sum">
-            How can brands, companies, or fellow creators collaborate with me
-            or get in touch?<img src="./assets/icons/arrow_forward_ios.svg" alt="arrow" />
-          </summary>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum,
-            deserunt quis rem nesciunt suscipit atque laborum, molestias
-            doloribus obcaecati dicta natus itaque possimus nemo ducimus
-            labore? Ipsa, ea possimus. Eius.
-          </p>
-        </details>
-        <details name="faq1" class="faq-item">
-          <summary class="faq-item-sum">
-            How can readers support this blog and the work behind it?<img src="./assets/icons/arrow_forward_ios.svg"
-              alt="arrow" />
-          </summary>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum,
-            deserunt quis rem nesciunt suscipit atque laborum, molestias
-            doloribus obcaecati dicta natus itaque possimus nemo ducimus
-            labore? Ipsa, ea possimus. Eius.
-          </p>
-        </details>
-      </div>
-    </section>
-    <section id="contact-section" class="contact-section">
-      <div class="contact-section-head">
-        <div class="contact-section-headline">
-          <img src="./assets/icons/person_pin.png" alt="Icon person-pin" />
-          <h2>Contact form</h2>
+
+      <section id="faq" class="faq-section">
+        <div class="faq-headline">
+          <img src="./assets/icons/live_help.png" alt="Icon live-help" />
+          <h2>FAQ</h2>
         </div>
-        <div class="contact-section-description">
+        <div class="faq-content">
+          <details name="faq1" class="faq-item">
+            <summary class="faq-item-sum">
+              What’s the story behind my travel blog?<img
+                src="./assets/icons/arrow_forward_ios.svg"
+                alt="arrow"
+              />
+            </summary>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum,
+              deserunt quis rem nesciunt suscipit atque laborum, molestias
+              doloribus obcaecati dicta natus itaque possimus nemo ducimus
+              labore? Ipsa, ea possimus. Eius.
+            </p>
+          </details>
+          <details name="faq1" class="faq-item">
+            <summary class="faq-item-sum">
+              How do I plan, document, and share my travels?<img
+                src="./assets/icons/arrow_forward_ios.svg"
+                alt="arrow"
+              />
+            </summary>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum,
+              deserunt quis rem nesciunt suscipit atque laborum, molestias
+              doloribus obcaecati dicta natus itaque possimus nemo ducimus
+              labore? Ipsa, ea possimus. Eius.
+            </p>
+          </details>
+          <details name="faq1" class="faq-item">
+            <summary class="faq-item-sum">
+              How can brands, companies, or fellow creators collaborate with me
+              or get in touch?<img
+                src="./assets/icons/arrow_forward_ios.svg"
+                alt="arrow"
+              />
+            </summary>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum,
+              deserunt quis rem nesciunt suscipit atque laborum, molestias
+              doloribus obcaecati dicta natus itaque possimus nemo ducimus
+              labore? Ipsa, ea possimus. Eius.
+            </p>
+          </details>
+          <details name="faq1" class="faq-item">
+            <summary class="faq-item-sum">
+              How can readers support this blog and the work behind it?<img
+                src="./assets/icons/arrow_forward_ios.svg"
+                alt="arrow"
+              />
+            </summary>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum,
+              deserunt quis rem nesciunt suscipit atque laborum, molestias
+              doloribus obcaecati dicta natus itaque possimus nemo ducimus
+              labore? Ipsa, ea possimus. Eius.
+            </p>
+          </details>
+        </div>
+      </section>
+      <section id="contact" class="contact-section">
+        <div class="contact-section-head">
+          <div class="contact-section-headline">
+            <img src="./assets/icons/person_pin.png" alt="Icon person-pin" />
+            <h2>Contact form</h2>
+          </div>
           <p>Have a question or an idea to collaborate?</p>
           <p>
             Get in touch—I'd love to hear from you and explore how we can work
