@@ -102,14 +102,25 @@ nav {
   left: 550px;
 }
 
+main {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 120px;
+  margin-bottom: 120px;
+}
+
 .highlight-section {
   padding-top: 120px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 88px;
 }
 
-.some-headline {
+.highlight-headline {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -117,19 +128,12 @@ nav {
   text-align: center;
 }
 
-.highlight-container {
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  gap: 8px;
-}
-
 .highlight-section > img {
   width: 40px;
   height: 40px;
 }
 
-.highlight-headline > p {
+.highlight-text > p {
   font-size: 24px;
   font-family: var(--maintextfamily);
   font-weight: 500;
@@ -137,10 +141,10 @@ nav {
 }
 
 .slider-a {
-  background-color: black;
   position: relative;
-  width: 250px;
-  height: 150px;
+  background-color: black;
+  width: 1200px;
+  height: 533px;
 
   display: flex;
   justify-content: center;
@@ -156,60 +160,42 @@ nav {
   z-index: 1;
   width: 400%;
   height: 100%;
-
   position: absolute;
   display: flex;
 
-  transition: all 1s ease-in-out;
+  transition:all 1s ease-in-out;
 }
 
 .slider-a-element {
   width: calc(100% / 4);
   height: 100%;
+  
 }
 
-.element-one {
+.slider-a-element img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
 }
 
-.element-two {
+.slider-a input[value="one"]:checked ~ .slider-a-wrapper {
+  transform: translateX(37.5%);
 }
-
-.element-three {
+.slider-a input[value="two"]:checked ~ .slider-a-wrapper {
+  transform: translateX(12.5%);
 }
-
-.element-four {
+.slider-a input[value="three"]:checked ~ .slider-a-wrapper {
+  transform: translateX(-12.5%);
 }
-
-.slider-a input [value="one"]:checked ~ .slider-a-wrapper {
-  transform: translateX(calc(100% / 3));
+.slider-a input[value="four"]:checked ~ .slider-a-wrapper {
+  transform: translateX(-37.5%);
 }
-
-.slider-a input [value="two"]:checked ~ .slider-a-wrapper {
-  transform: translateX(0);
-}
-
-.slider-a input [value="three"]:checked ~ .slider-a-wrapper {
-  transform: translateX(calc(-100% / 3));
-}
-
-/* .slider-a input [value="four"]:checked ~ .slider-a-wrapper {
-  transform: translateX(calc(-200% / 3));
-} */
-
 /* .highlight-img {
   position: absolute;
   transition: 0.5s ease-out;
 } */
-
-main {
-  width: 100%;
-  max-width: 1200px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 120px;
-  margin-bottom: 120px;
-}
 
 .faq-section {
   width: 100%;
