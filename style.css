@@ -40,7 +40,7 @@ nav {
   gap: 72px;
 }
 
-.nav-links>a {
+.nav-links > a {
   text-decoration: none;
   color: #f8f5eb;
   font-family: "Arima";
@@ -48,8 +48,23 @@ nav {
   font-weight: 700;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+}
+
+@media screen and (max-width: 767px) {
+}
+
+@media screen and (max-width: 1024px) {
+  .nav-links > a {
+    display: none;
+  }
+}
+
 .landing-section {
   width: 100%;
+}
+
+.header.png {
 }
 
 .content-section {
@@ -125,12 +140,12 @@ main {
   text-align: center;
 }
 
-.highlight-section>img {
+.highlight-section > img {
   width: 40px;
   height: 40px;
 }
 
-.highlight-text>p {
+.highlight-text > p {
   font-size: 24px;
   font-family: var(--maintextfamily);
   font-weight: 500;
@@ -183,7 +198,7 @@ main {
   gap: 8px;
 }
 
-.slider-a-element-description>h2 {
+.slider-a-element-description > h2 {
   font-family: Palanquin Dark;
   font-size: clamp(2.5rem, 1.25rem + 4vw, 3rem);
   line-height: 1.2;
@@ -191,7 +206,7 @@ main {
   font-weight: 600;
 }
 
-.slider-a-element-description>p {
+.slider-a-element-description > p {
   font-family: palanquin;
   font-size: clamp(1rem, 0.25rem + 2vw, 1.75rem);
   line-height: 1.3;
@@ -208,14 +223,13 @@ main {
   border-top-right-radius: 96px;
 }
 
-.slider-a input[value="one"]:checked~.slider-a-wrapper .element-one,
-.slider-a input[value="two"]:checked~.slider-a-wrapper .element-two,
-.slider-a input[value="three"]:checked~.slider-a-wrapper .element-three,
-.slider-a input[value="four"]:checked~.slider-a-wrapper .element-four {
+.slider-a input[value="one"]:checked ~ .slider-a-wrapper .element-one,
+.slider-a input[value="two"]:checked ~ .slider-a-wrapper .element-two,
+.slider-a input[value="three"]:checked ~ .slider-a-wrapper .element-three,
+.slider-a input[value="four"]:checked ~ .slider-a-wrapper .element-four {
   opacity: 1;
   z-index: 3;
 }
-
 
 .slider-a-radio-btn {
   appearance: none;
@@ -234,7 +248,6 @@ main {
   border-radius: 20px;
 }
 
-
 .faq-section {
   width: 100%;
   display: flex;
@@ -252,12 +265,12 @@ main {
   margin-bottom: 24px;
 }
 
-.faq-headline>img {
+.faq-headline > img {
   width: clamp(40px, 28px + 2.5vw, 48px);
   height: auto;
 }
 
-.faq-headline>h2 {
+.faq-headline > h2 {
   font-family: arima;
   font-size: clamp(2.5rem, 1.25rem + 4vw, 3.25rem);
   color: rgba(78, 164, 135, 1);
@@ -292,7 +305,7 @@ main {
   align-items: center;
 }
 
-.faq-item>p {
+.faq-item > p {
   font-family: var(--maintextfamily);
   font-size: 1rem;
   color: rgba(54, 53, 52, 1);
@@ -334,12 +347,12 @@ main {
   margin-bottom: 24px;
 }
 
-.contact-section-headline>img {
+.contact-section-headline > img {
   width: clamp(40px, 28px + 2.5vw, 48px);
   height: auto;
 }
 
-.contact-section-headline>h2 {
+.contact-section-headline > h2 {
   font-family: arima;
   font-size: clamp(2.5rem, 1.25rem + 4vw, 3.25rem);
   color: rgba(78, 164, 135, 1);
@@ -353,7 +366,7 @@ main {
   align-items: center;
 }
 
-.contact-section-description>p {
+.contact-section-description > p {
   font-family: palanquin;
   font-size: 1.5rem;
   color: rgba(84, 55, 13, 1);
@@ -403,7 +416,7 @@ main {
   padding-bottom: 1.5rem;
 }
 
-.cfi-check input[type=checkbox] {
+.cfi-check input[type="checkbox"] {
   appearance: none;
   width: 18px;
   height: 18px;
@@ -412,14 +425,13 @@ main {
   background: #fff;
 }
 
-.cfi-check input[type=checkbox]:hover {
+.cfi-check input[type="checkbox"]:hover {
   background: rgba(241, 201, 83, 1);
 }
 
-.cfi-check input[type=checkbox]:checked {
+.cfi-check input[type="checkbox"]:checked {
   background: rgba(78, 164, 135, 1);
 }
-
 
 .cfi-check input[type="checkbox"]:checked::before {
   content: url("./assets/icons/check.svg");
