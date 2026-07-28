@@ -48,18 +48,6 @@ nav {
   font-weight: 700;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-}
-
-@media screen and (max-width: 767px) {
-}
-
-@media screen and (max-width: 1024px) {
-  .nav-links > a {
-    display: none;
-  }
-}
-
 .landing-section {
   width: 100%;
 }
@@ -550,6 +538,40 @@ main {
 .foot-navigation img:hover {
   width: 120%;
   height: 120%;
+}
+
+@media screen and (max-width: 1024px) {
+  .nav-links > a {
+    display: none;
+  }
+
+  header {
+    justify-content: center;
+  }
+
+  .content-section {
+    max-width: 1400px;
+    width: 100%;
+  }
+
+  .vector-icon {
+    left: 0px;
+    height: 300px;
+    width: 230px;
+  }
+
+  .circle-icon {
+    top: 121px;
+    left: 70px;
+  }
+
+  .vector-text-container {
+    display: none;
+  }
+
+  .highlight-text > p {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
