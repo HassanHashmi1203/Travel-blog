@@ -153,6 +153,7 @@ main {
 .slider-a input {
   position: relative;
   z-index: 4;
+  cursor: pointer;
 }
 
 /* .slider-a-wrapper {
@@ -167,6 +168,14 @@ main {
   inset: 0;
   opacity: 0;
   transition: opacity 500ms ease-in-out;
+}
+
+.slider-a-element-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+text-decoration: none;
 }
 
 .slider-a-element-description {
@@ -186,7 +195,7 @@ main {
   gap: 8px;
 }
 
-.slider-a-element-description > h2 {
+.slider-a-element-description  h2 {
   font-family: Palanquin Dark;
   font-size: clamp(2.5rem, 1.25rem + 4vw, 3rem);
   line-height: 1.2;
@@ -194,7 +203,7 @@ main {
   font-weight: 600;
 }
 
-.slider-a-element-description > p {
+.slider-a-element-description p {
   font-family: palanquin;
   font-size: clamp(1rem, 0.25rem + 2vw, 1.75rem);
   line-height: 1.3;
