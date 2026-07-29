@@ -25,10 +25,10 @@ p {
   padding: 16px 24px 48px 24px;
 }
 
-.a3content-slidersection >h3 {
+.a3content-slidersection>h3 {
   font-family: arima;
   font-size: clamp(1.25rem, 2rem + 3.75vw, 2rem);
-  color:rgba(84, 55, 13, 1);
+  color: rgba(84, 55, 13, 1);
 }
 
 .a3content-slider {
@@ -39,6 +39,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 10px;
 }
 
 .a3content-slider-wrapper {
@@ -70,49 +71,24 @@ p {
   display: block;
 }
 
-.a3content-slider:has(.a3content-slider-btnbox input[value="one"]:checked) .element-one,
-.a3content-slider:has(.a3content-slider-btnbox input[value="two"]:checked) .element-two,
-.a3content-slider:has(.a3content-slider-btnbox input[value="three"]:checked) .element-three,
-.a3content-slider:has(.a3content-slider-btnbox input[value="four"]:checked) .element-four,
-.a3content-slider:has(.a3content-slider-btnbox input[value="five"]:checked) .element-five {
-  width: 400px;
-  z-index: 2;
-  transform: perspective(250px) rotateY(0deg) scale(1.3);
-}
-
-.a3content-slider:has(.a3content-slider-btnbox input[value="one"]:checked) .element-two, .element-three, .element-four,.element-five,
-.a3content-slider:has(.a3content-slider-btnbox input[value="two"]:checked) .element-three, .element-four,.element-five,
-.a3content-slider:has(.a3content-slider-btnbox input[value="three"]:checked) .element-four, .element-five,
-.a3content-slider:has(.a3content-slider-btnbox input[value="four"]:checked) .element-five {
-   transform: perspective(250px) rotateY(-18deg) translateX(20px) scale(1);
-}
-
-.a3content-slider-element:hover {
-  width: 400px;
-  z-index: 2;
-  transform: perspective(250px) rotateY(0deg) scale(1.3);
-}
-
-.a3content-slider-element:hover ~ .a3content-slider-element {
-  transform: perspective(250px) rotateY(-18deg) translateX(20px) scale(1);
-}
 
 
-.a3content-slider-btnbox{
-  display: none;
-  /* position: absolute; */
-  top: 120%;
-  display: flex;
-  justify-content: center;
-}
 
-.a3content-slider-radiobtn{
+
+
+
+
+
+
+
+.a3content-slider-radiobtn {
   appearance: none;
   width: 22px;
   height: 22px;
-  background-color:rgba(78, 164, 135, 0.3);
+  background-color: rgba(78, 164, 135, 0.3);
   border-radius: 50%;
   margin: 4px;
+  transition: all 250ms ease-in-out;
 }
 
 .a3content-slider-radiobtn:checked {
@@ -130,7 +106,7 @@ p {
   gap: 32px;
 }
 
-.a3content-middle > p {
+.a3content-middle>p {
   font-family: palanquin;
   font-size: clamp(1rem, 0.25rem + 2vw, 1.5rem);
   line-height: 1.5;
@@ -138,7 +114,7 @@ p {
   padding: 16px 0px;
 }
 
-.a3content-middle-listblock > p {
+.a3content-middle-listblock>p {
   font-family: palanquin;
   font-size: clamp(1rem, 0.25rem + 2vw, 1.5rem);
   line-height: 1.5;
@@ -150,14 +126,14 @@ p {
   margin: 16px 100px;
 }
 
-.a3content-middle-list > li {
+.a3content-middle-list>li {
   font-family: palanquin;
   font-size: clamp(1rem, 0.25rem + 2vw, 1.5rem);
   line-height: 1.3;
   color: rgba(61, 61, 61, 1);
 }
 
-.a3content-middle-list > li::marker {
+.a3content-middle-list>li::marker {
   font-size: 0.8rem;
 }
 
@@ -175,35 +151,71 @@ p {
   gap: 48px;
 }
 
-.a3content-bottom > p {
+.a3content-bottom>p {
   font-family: palanquin;
   font-size: clamp(1rem, 0.25rem + 2vw, 1.5rem);
   line-height: 1.3;
   color: rgba(61, 61, 61, 1);
 }
 
-@media screen and (min-width:768px) and (max-width:1200px) {
-.slider-element {
-  width: 200px;
-  height: 290px;
+@media (min-width:769px) and (hover: hover) {
+  .a3content-slider-element:hover {
+    width: 400px;
+    z-index: 2;
+    transform: perspective(250px) rotateY(0deg) scale(1.3);
+  }
+
+  .a3content-slider-element:hover~.a3content-slider-element {
+    transform: perspective(250px) rotateY(-18deg) translateX(20px) scale(1);
+  }
 }
 
+@media (max-width:1200px) {
+  .a3content-slidersection {
+    gap: 32px;
+    padding: 8px 12px 24px 24px;
+  }
+
+  .a3content-slider-element {
+    width: 200px;
+    height: 290px;
+  }
+
+  .a3content-slider-element:hover {
+    width: 200px;
+  }
 }
 
-@media screen and (max-width:768px) {
+@media (max-width:768px) {
 
-.a3content-slidersection {
- width: 600px;
- justify-content: flex-start;
-  overflow: hidden;
- }
+  .a3content-slider-btnbox {
+    position: absolute;
+    top: 105%;
+    display: flex;
+    justify-content: center;
+  }
 
- .slider-element {
-  width: 200px;
-  height: 290px;
-  
-  transform: perspective(250px) rotateY(18deg) translate(-20px) scale(1);
-  transform-origin: 50% 50%;
-  transition: all 300ms ease-out;
-}
+  .a3content-slider:has(.a3content-slider-btnbox input[value="one"]:checked) .element-one,
+  .a3content-slider:has(.a3content-slider-btnbox input[value="two"]:checked) .element-two,
+  .a3content-slider:has(.a3content-slider-btnbox input[value="three"]:checked) .element-three,
+  .a3content-slider:has(.a3content-slider-btnbox input[value="four"]:checked) .element-four,
+  .a3content-slider:has(.a3content-slider-btnbox input[value="five"]:checked) .element-five {
+    width: 400px;
+    z-index: 2;
+    transform: perspective(250px) rotateY(0deg) scale(1.3);
+  }
+
+  .a3content-slider:has(.a3content-slider-btnbox input[value="one"]:checked) .element-two,
+  .a3content-slider:has(.a3content-slider-btnbox input[value="one"]:checked) .element-three,
+  .a3content-slider:has(.a3content-slider-btnbox input[value="one"]:checked) .element-four,
+  .a3content-slider:has(.a3content-slider-btnbox input[value="one"]:checked) .element-five,
+  .a3content-slider:has(.a3content-slider-btnbox input[value="two"]:checked) .element-three,
+  .a3content-slider:has(.a3content-slider-btnbox input[value="two"]:checked) .element-four,
+  .a3content-slider:has(.a3content-slider-btnbox input[value="two"]:checked) .element-five,
+  .a3content-slider:has(.a3content-slider-btnbox input[value="three"]:checked) .element-four,
+  .a3content-slider:has(.a3content-slider-btnbox input[value="three"]:checked) .element-five,
+  .a3content-slider:has(.a3content-slider-btnbox input[value="four"]:checked) .element-five {
+    transform: perspective(250px) rotateY(-18deg) translateX(20px) scale(1);
+  }
+
 }
