@@ -1,13 +1,7 @@
-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 header {
   background-color: #4ea487;
   height: 130px;
-  width: 100%;
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -133,89 +127,302 @@ header {
   transform: translate(3px, -3px);
 }
 
+
+
+
+
+/* Bühne */
 .landing-section {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  padding-inline: 8px;
-}
-
-.content-section {
-  width: min(100%, 1440px);
-  height: 520px;
-  border: 3px, solid, black;
-  margin-inline: auto;
-  background-image: url(/assets/img/header_photo.png);
-  background-position:center;
-  background-repeat: no-repeat;
-  background-size: cover;
   position: relative;
-
+  width: 100%;
+  max-width: 1440px;
+  height: 515px;
+  margin-inline: auto;
+  margin-bottom: 88px;
 }
 
-.vector-container {
+/* Nur für horizontales Beschneiden */
+.landing-clipper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow-x: clip;
+  overflow-y: visible;
+}
+
+/* Hero-Bild */
+.landing-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* Gelbe Fläche */
+.landing-section-bg {
   position: absolute;
   inset: 0;
-  display: none;
-  flex-direction: column;
+  background-color: rgba(241, 201, 83, 1);
+  animation: bg-slideout 3.0s ease-in-out 1.8s forwards;
 }
 
-.vector-icon {
-  width: 640px;
-  height: 540px;
-}
-
-.vector-text-container {
+/* Vektor */
+.landing-section-vector {
   position: absolute;
-  left: 120px;
-  top: 80px;
+  top: 0;
+  right: 0;
+  transform: translateX(105%);
+  animation: vector-timeline 3s ease-in-out 1.6s forwards;
+}
+
+.landing-section-vector img {
+  display: flex;
+  flex: 0 0 340px;
+  max-width: none;
+}
+
+/* Text */
+.landing-section-text {
+  position: absolute;
+  top: 300px;
+  left: clamp(24px, 40%, 560px);
+  width: min(345px, calc(100% - 48px));
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 32px;
+  animation:
+    text-rise 0.6s ease-out 0s forwards,
+    text-slideout 1.1s ease-in-out 1.8s forwards;
 }
 
-.vector-text-container h2 {
-  font-family: Arima;
+.landing-section-text h2 {
+  font-family: Arima, sans-serif;
   font-size: clamp(2.5rem, 1.25rem + 4vw, 3.75rem);
   line-height: 1.2;
-  color: #54370d;
-  font-weight: 600;
+  color: rgba(84, 55, 13, 1);
+  font-weight: 700;
 }
 
-.slider-a-element-description p {
-  font-family: palanquin;
-  font-size: clamp(1rem, 0.25rem + 2vw, 1.75rem);
-  line-height: 1.3;
-  color: white;
+.landing-section-text p {
+  font-family: Palanquin, sans-serif;
+  font-size: clamp(1.125rem, 0.95rem + 1vw, 1.75rem);
+  line-height: 1.2;
+  color: rgba(84, 55, 13, 1);
+  opacity: 0;
+  animation: text-fadein 0.7s ease-in 0.65s forwards;
 }
 
-.landing-span {
-  font-family: Palanquin;
-  font-size: clamp(1rem, 0.25rem + 2vw, 1.75rem);
-  line-height: 1.3;
-  color: #54370d;
-  max-width: 21ch;
-}
-
-.circle-icon {
+/* Rotor liegt außerhalb des Clippers */
+.landing-section-rotor {
   position: absolute;
-  top: 280px;
-  left: 420px;
+  left: 30%;
+  top: 110%;
+  width: 160px;
+  height: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  animation:
+    rotor-enter 1.4s ease-out 3.6s forwards,
+    rotor-fade 1.6s ease-in 3.3s forwards;
 }
+
+.landing-section-rotor img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  animation:
+    rotor-spin 2.1s linear 4.8s 2;
+}
+
+/* Keyframes */
+@keyframes text-rise {
+  from {
+    transform: translateY(0);
+    opacity: 0.1;
+  }
+
+  to {
+    transform: translateY(-180px);
+    opacity: 1;
+  }
+}
+
+@keyframes text-fadein {
+  from {
+    opacity: 0.1;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes bg-slideout {
+  0% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-40%);
+  }
+
+  75% {
+    transform: translateX(-70%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes text-slideout {
+  from {
+    transform: translateY(-180px) translateX(0);
+  }
+
+  to {
+    transform: translateY(-180px) translateX(-460px);
+  }
+}
+
+@keyframes vector-timeline {
+  0% {
+    transform: translateX(105%);
+  }
+
+  38% {
+    transform: translateX(-50%);
+  }
+
+  55% {
+    transform: translateX(-50%);
+  }
+
+  100% {
+    transform: translateX(-125%);
+  }
+}
+
+@keyframes rotor-enter {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-250px);
+  }
+}
+
+@keyframes rotor-fade {
+  from {
+    opacity: 0.05;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+@keyframes rotor-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .landing-section {
+    height: 440px;
+  }
+
+  .landing-section-text {
+    top: 260px;
+    left: 24px;
+    gap: 20px;
+  }
+
+  .landing-section-rotor {
+    left: 20%;
+    width: 120px;
+    height: 120px;
+  }
+
+  @keyframes text-rise {
+    from {
+      transform: translateY(0);
+      opacity: 0.1;
+    }
+
+    to {
+      transform: translateY(-120px);
+      opacity: 1;
+    }
+  }
+
+  @keyframes text-slideout {
+    from {
+      transform: translateY(-120px) translateX(0);
+    }
+
+    to {
+      transform: translateY(-120px) translateX(-220px);
+    }
+  }
+
+  @keyframes rotor-enter {
+    from {
+      transform: translateY(0);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateY(-180px);
+      opacity: 1;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .landing-section {
+    height: 380px;
+  }
+
+  .landing-section-text {
+    top: 220px;
+    width: min(300px, calc(100% - 32px));
+  }
+
+  .landing-section-rotor {
+    left: 18%;
+    width: 96px;
+    height: 96px;
+  }
+}
+
+
+
+
 
 main {
   width: 100%;
   max-width: 1200px;
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; */
   gap: 120px;
   margin-bottom: 120px;
+  margin-inline: auto;
 }
 
 .highlight-section {
-  padding-top: 120px;
   display: flex;
   flex-direction: column;
   align-items: center;
