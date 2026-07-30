@@ -176,6 +176,10 @@ p {
   .a3content-slider-element:hover {
     flex: 1 0 220px;
   }
+
+  .a3content-middle-listblock {
+  margin: 16px 64px;
+}
 }
 
 @media (max-width:768px) {
@@ -210,4 +214,7 @@ p {
     transform: perspective(250px) rotateY(-18deg) translateX(20px) scale(1);
   }
 
+  .a3content-middle-listblock {
+  margin: 8px 16px;
+}
 }
