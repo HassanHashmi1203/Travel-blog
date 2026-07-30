@@ -4,22 +4,13 @@ body {
   align-items: center;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-* {
-  margin: 0;
-  box-sizing: border-box;
-}
-
 header {
   background-color: #4ea487;
   height: 130px;
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 .logo {
@@ -27,11 +18,14 @@ header {
   height: 72px;
 }
 
-nav {
-  padding: 0px 250px;
+.header-navigation {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0px 32px;
   display: flex;
   align-items: center;
-  gap: 72px;
+  justify-content: flex-start;
+  gap: 102px;
 }
 
 .nav-links {
@@ -54,74 +48,152 @@ nav {
 .nav-links>a::after {
   content: "";
   position: absolute;
-  left: 50%;
-  bottom: -12px;
 
-  background-image: url(assets/icons/Vector\ 11.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
 
-  transform: translate(-50%, 10px);
-  width: 80px;
-  height: 25px;
   opacity: 0;
-  transition: all 0.25s ease;
+  transition: transform 0.25s ease-in, opacity 0.25s ease-in;
 }
 
-.nav-links>a:hover::after {
-  opacity: 1;
-  transform: translate(-50%, 0);
+.nav-links>a:visited {
+  color: rgba(241, 201, 83, 1);
 }
 
 .nav-links>a:hover {
   color: #fff;
-  transform: translateY(-3px);
+}
+
+.nav-link-highlight::after {
+  left: 0px;
+  bottom: -8px;
+  background-image: url(/assets/icons/Vector_01.svg);
+  width: 110%;
+  height: 100%;
+}
+
+.nav-link-highlight:hover::after {
+  opacity: 1;
+}
+
+.nav-link-highlight:hover {
+  animation: highlight-jerk 250ms;
+}
+
+@keyframes highlight-jerk {
+  0% {
+    transform: translateX(0);
+  }
+
+  35% {
+    transform: translateX(3px);
+  }
+
+  70% {
+    transform: translateX(-1px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.nav-link-faq::after {
+  left: 0px;
+  bottom: -8px;
+  background-image: url(/assets/icons/Vector_02.svg);
+  width: 54px;
+  height: 25px;
+}
+
+.nav-link-faq:hover::after {
+  opacity: 1;
+  transform: translate(-4px, -4px);
+}
+
+.nav-link-faq:hover {
+  transform: translate(3px, 3px);
+}
+
+.nav-link-contact::after {
+  left: -4px;
+  bottom: -10px;
+  background-image: url(/assets/icons/Vector_03.svg);
+  width: 110%;
+  height: 110%;
+}
+
+.nav-link-contact:hover::after {
+  opacity: 1;
+  transform: translate(-3px, 3px);
+}
+
+.nav-link-contact:hover {
+  transform: translate(3px, -3px);
 }
 
 .landing-section {
   width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-inline: 8px;
 }
 
-.header.png {}
-
 .content-section {
-  background-image: url(assets/img/header\ photo.png);
-  background-position: center;
+  width: min(100%, 1440px);
+  height: 520px;
+  border: 3px, solid, black;
+  margin-inline: auto;
+  background-image: url(/assets/img/header_photo.png);
+  background-position:center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 520px;
-  width: 1440px;
   position: relative;
+
 }
 
 .vector-container {
-  display: flex;
+  position: absolute;
+  inset: 0;
+  display: none;
   flex-direction: column;
 }
 
 .vector-icon {
   width: 640px;
   height: 540px;
-  position: absolute;
-  left: 120px;
 }
 
 .vector-text-container {
   position: absolute;
-  left: 230px;
+  left: 120px;
   top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
 }
 
 .vector-text-container h2 {
+  font-family: Arima;
+  font-size: clamp(2.5rem, 1.25rem + 4vw, 3.75rem);
+  line-height: 1.2;
   color: #54370d;
+  font-weight: 600;
+}
+
+.slider-a-element-description p {
+  font-family: palanquin;
+  font-size: clamp(1rem, 0.25rem + 2vw, 1.75rem);
+  line-height: 1.3;
+  color: white;
 }
 
 .landing-span {
-  font-family: "Palanquin";
-  font-size: 28px;
-  font-weight: 500;
-  font-style: normal;
+  font-family: Palanquin;
+  font-size: clamp(1rem, 0.25rem + 2vw, 1.75rem);
+  line-height: 1.3;
   color: #54370d;
   max-width: 21ch;
 }
@@ -129,7 +201,7 @@ nav {
 .circle-icon {
   position: absolute;
   top: 280px;
-  left: 550px;
+  left: 420px;
 }
 
 main {
@@ -585,7 +657,7 @@ main {
     display: none;
   }
 
-  header {
+  .header-navigation {
     justify-content: center;
   }
 
