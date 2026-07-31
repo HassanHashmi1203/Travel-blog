@@ -1,4 +1,5 @@
 .article-main {
+  margin-top: 130px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -187,7 +188,7 @@
   padding: 8px 24px;
 }
 
-.followme-content > p {
+.followme-content>p {
   font-family: arima;
   font-size: clamp(1rem, 0.25rem + 2vw, 1.5rem);
   font-weight: 500;
@@ -207,14 +208,14 @@
   padding: 4px 24px;
 }
 
-.followme-button > p {
+.followme-button>p {
   font-family: arima;
   font-size: 1.5rem;
   font-weight: 700;
   color: rgba(241, 201, 83, 1);
 }
 
-.followme > img {
+.followme>img {
   position: absolute;
   top: clamp(20px, 0px + 10vw, 60px);
   left: 20px;
@@ -297,6 +298,7 @@
   .headarticle-right {
     width: 300px;
   }
+
   .followme-content {
     gap: 24px;
     padding: 8px 4px;
