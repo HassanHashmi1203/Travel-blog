@@ -1,12 +1,20 @@
+body{
+  padding-top: 130px;
+}
+
+
 header {
-  background-color: #4ea487;
+  z-index: 99;
+  position: fixed;
+  top: 0;
+  left: 0;
   height: 130px;
-  width: 100vw;
+    width: 100vw;
+  background-color: #4ea487;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
 .logo {
   width: 72px;
   height: 72px;
@@ -127,31 +135,22 @@ header {
   transform: translate(3px, -3px);
 }
 
-
-
-
-
-/* Bühne */
 .landing-section {
   position: relative;
   width: min(100%, 1440px);
   height: 515px;
   margin-inline: auto;
   margin-bottom: 88px;
+  overflow-x: clip;
+  overflow-y: visible;
 }
 
-/* Nur für horizontales Beschneiden */
 .landing-clipper {
-  border: 5px solid greenyellow;
   width: 100%;
   height: 100%;
-  /* overflow-x: clip; */
-  overflow-y: visible;
-  
-  
+  overflow-y: hidden;
 }
 
-/* Hero-Bild */
 .landing-image {
   width: 100%;
   height: 100%;
@@ -159,49 +158,105 @@ header {
   object-fit: cover;
 }
 
-.landing-layer01 {
- z-index: 1;
- position: absolute;
- inset: 0;
- transform: translateX(-50%);
- width: 200%;
-  height: 100%;
-  border: 2px solid black;
-  display: flex;
-  opacity: 0.5;
-}
-/* Gelbe Fläche */
-.landing-section-bg {
-  border: 2px solid blue;
-  display: flex;
-  width: 50%;
-  height: 100%;
-  background-color: rgba(241, 201, 83, 1);
-}
-
-/* Vektor */
-.landing-section-vector {
-  border: 2px solid blue;
-  width: 50%;
-  min-width: 0;
-
-}
-
-.landing-section-vector >img{
-  /* display: block;
+.landing-layer {
+  position: absolute;
+  inset: 0;
+  transform: translateX(0px);
   width: 100%;
-  height: 100%;
-  object-fit: contain; */
 }
 
+.landing-layer01 {
+  z-index: 1;
+  display: none;
+  padding: 0;
+  opacity: 0.1;
+}
 
 .landing-layer02 {
-  opacity: 0;
+  z-index: 2;
+  display: block;
 }
 
 .landing-layer03 {
-  opacity: 0;
+  z-index: 3;
+  display: flex;
+  justify-content: flex-start;
+  padding-top: clamp(32px, -330px + 33vw, 140px);
+  padding-left: clamp(24px, -312px + 30vw, 120px);
 }
+
+.landing-layer04 {
+  z-index: 4;
+  display: flex;
+  justify-content: flex-start;
+  padding-top: clamp(90px, -15.6px + 21.1vw, 280px);
+  padding-left: clamp(40px, -188px + 45vw, 450px);
+}
+
+.landing-section-bg {
+  width: 100%;
+  height: 50%;
+  background-color: rgba(241, 201, 83, 1);
+}
+
+.landing-section-vector {
+  width: 650px;
+  height: 100%;
+}
+
+.landing-section-vector >img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.landing-section-text {
+  width: min(100%, 345px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+}
+
+.landing-section-text h2 {
+  font-family: Arima, sans-serif;
+  font-size: clamp(2.5rem, 1.25rem + 4vw, 3.75rem);
+  line-height: 1.2;
+  color: rgba(84, 55, 13, 1);
+  font-weight: 700;
+}
+
+.landing-section-text p {
+  font-family: Palanquin, sans-serif;
+  font-size: clamp(1.125rem, 0.95rem + 1vw, 1.75rem);
+  line-height: 1.2;
+  color: rgba(84, 55, 13, 1);
+}
+
+.landing-section-rotor {
+  width: clamp(80px, -11.4px + 14.3vw, 160px);
+  height: clamp(80px, -11.4px + 14.3vw, 160px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.landing-section-rotor img {
+  width: 100%;
+  height: 100%;
+  animation:
+    rotor-spin 2.1s linear 4.8s 2;
+}
+
+
+
+
+
+
+
+
+
+
 
 main {
   width: min(100%, 1200px);
@@ -649,79 +704,4 @@ main {
 .foot-navigation img:hover {
   width: 120%;
   height: 120%;
-}
-
-@media screen and (max-width: 1024px) {
-  .nav-links>a {
-    display: none;
-  }
-
-  .header-navigation {
-    justify-content: center;
-  }
-
-  .highlight-text>p {
-    display: none;
-  }
-
-  .slider-a-element-description {
-    top: 24px;
-    left: 12px;
-    padding: 4px 32px 4px 8px;
-    gap: 4px;
-    max-width: clamp (380px, -2.75px + 84vw, 800px);
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  .foot {
-    width: 100%;
-    padding: 60px 24px;
-  }
-
-  .foot-content-left {
-    gap: 24px;
-  }
-
-  .foot-content-left-links {
-    gap: 24px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .contact-section-description {
-    display: none;
-  }
-
-  .cfi-row {
-    flex-direction: column;
-  }
-
-  .foot {
-    width: 100%;
-    padding: 30px 8px 130px 8px;
-  }
-
-  .foot-content-left {
-    flex-direction: column-reverse;
-    align-items: flex-start;
-    gap: 8px;
-  }
-
-  .foot-content-left-links {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-  }
-
-  .foot-navigation {
-    display: flex;
-    position: fixed;
-    bottom: 0;
-    justify-content: space-between;
-    align-items: center;
-    gap: 48px;
-    padding: 24px;
-  }
 }
