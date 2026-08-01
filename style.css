@@ -439,25 +439,19 @@ main {
   interpolate-size: allow-keywords;
 }
 
-
 .faq-item::details-content {
   block-size: 0;
   opacity: 0;
   overflow: clip;
   transition:
-    block-size 0.25s ease-in-out,
-    opacity 0.5s ease,
-    content-visibility 0.35s allow-discrete;
-}
+    block-size 0.5s ease-in-out,
+    opacity 0.3s ease-in-out;
+} 
 
 .faq-item[open]::details-content {
   block-size: auto;
   opacity: 1;
 }
-
-
-
-
 
 .faq-item-sum {
   font-family: var(--maintextfamily);
@@ -661,7 +655,6 @@ main {
   color: rgba(185, 16, 47, 1);
   transform: translate(4px, -140px);
 }
-
 
 .cfi-send-button {
   justify-self: center;

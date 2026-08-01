@@ -147,6 +147,15 @@
   color: rgba(78, 164, 135, 1);
 }
 
+.protipps-text a {
+  text-decoration: none;
+  font-family: palanquin;
+  font-size: clamp(1rem, 0.25rem + 2vw, 1.5rem);
+  font-weight: 700;
+  line-height: 1.5;
+  color: rgba(78, 164, 135, 1);
+}
+
 .protipps-marker {
   position: absolute;
   top: -20px;
