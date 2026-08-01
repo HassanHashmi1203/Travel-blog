@@ -17,15 +17,24 @@ header {
   padding: 0px 32px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 100px;
   margin-inline: auto;
 }
 
 .logo {
+  display: block;
   width: 72px;
   height: 72px;
+  transform: scale(1);
+  transform-origin: 0% 0%;
+  transition: scale 250ms ease-in-out;
 }
+
+.logo:hover{
+  transform: scale(1.05);
+}
+
 
 .nav-links {
   display: flex;
@@ -252,8 +261,7 @@ main {
   flex-direction: column;
   align-items: center;
   gap: 120px;
-  margin-bottom: 120px;
-
+  margin-bottom: 16px;
 }
 
 .highlight-section {
@@ -437,8 +445,8 @@ main {
   opacity: 0;
   overflow: clip;
   transition:
-    block-size 2.35s ease-in,
-    opacity 1.25s ease,
+    block-size 0.25s ease-in-out,
+    opacity 0.5s ease,
     content-visibility 0.35s allow-discrete;
 }
 
@@ -470,7 +478,8 @@ main {
   border-radius: 5px;
 }
 
-.faq-sum img {
+.faq-item-sum img {
+  display: block;
   width: 24px;
   height: auto;
 }
@@ -601,11 +610,11 @@ main {
 }
 
 .cfi-check input[type="checkbox"]:checked::after {
-  content:"";
+  content: "";
   display: block;
   width: 100%;
   height: 100%;
-  background-image:url("./assets/icons/check.svg");
+  background-image: url("./assets/icons/check.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -722,10 +731,13 @@ main {
   text-decoration: none;
   font-size: 1rem;
   color: white;
+  font-weight:400;
+  transition: opacity 150ms ease-in, color 150ms ease-in;
 }
 
 .foot-content-left a:hover {
-  font-weight: bold;
+  color: #54370d;
+  font-weight: 500;
 }
 
 .foot-content-right {
@@ -736,29 +748,35 @@ main {
 }
 
 .foot-content-right img {
+  display: block;
   height: 32px;
-  width: 100%;
-  transition: all 250ms ease-in-out;
+  width: auto;
+  transform: scale(1);
+  transform-origin: 0% 100%;
+  transition: transform 250ms ease-in-out;
 }
 
 .foot-content-right img:hover {
-  width: 120%;
-  height: 120%;
+transform: scale(1.1);
 }
 
 .foot-navigation {
+  position: fixed;
+  bottom: 0;
   width: 100%;
   background-color: rgba(241, 201, 83, 1);
   display: none;
 }
 
 .foot-navigation img {
+  display: block;
   height: 48px;
-  width: 100%;
-  transition: all 250ms ease-in-out;
+  width: auto;
+  transform: scale(1);
+  transform-origin: center;
+  transition: transform 250ms ease-in-out;
 }
 
 .foot-navigation img:hover {
-  width: 120%;
-  height: 120%;
+transform: scale(1.2);
 }
