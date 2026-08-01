@@ -196,7 +196,111 @@
   text-align: center;
 }
 
+.followme>img {
+  position: absolute;
+  top: clamp(20px, 0px + 10vw, 60px);
+  left: 20px;
+  width: clamp(40px, -40px + 12.5vw, 90px);
+  height: 100px;
+}
+
+.followme-button-box {
+  display: inline-grid;
+  grid-template-columns: auto 0fr;
+  align-items: center;
+  transition: grid-template-columns 2500ms ease;
+}
+
 .followme-button {
+  list-style: none;
+  user-select: none;
+  cursor: pointer;
+  max-width: 150px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(78, 164, 135, 1);
+  border-radius: 40px;
+  gap: 16px;
+  padding: 4px 24px;
+}
+
+.followme-button>img {
+  display: block;
+  width: 32px;
+  height: auto;
+}
+
+.followme-button>p {
+  font-family: arima;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: rgba(241, 201, 83, 1);
+  transform: translate(0px);
+  transition: transform 250ms ease-in-out;
+}
+
+.followme-button-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding: 4px 24px;
+}
+
+.followme-button-links>img {
+  display: block;
+  width: 32px;
+  height: auto;
+}
+
+.followme-button-linkbox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.followme-button-linkbox>a {
+  text-decoration: none;
+  font-family: arima;
+  font-size: 1rem;
+  font-weight: 500;
+  color: rgba(78, 164, 135, 1);
+}
+
+.followme-button-box[open] {
+  grid-template-columns: auto 1fr;
+}
+
+.followme-button-box[open] .followme-button>img {
+  opacity: 0;
+  width: 0;
+  margin: 0;
+}
+
+.followme-button-box[open] .followme-button>p {
+  transform: translateX(-2px);
+}
+
+.followme-button-links {
+  overflow: hidden;
+  opacity: 0;
+  transform: translateX(-8px) scale(0.5);
+  transition: opacity 250ms ease, transform 250ms ease, scale 2s ease;
+}
+
+.followme-button-box[open] .followme-button-links {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+}
+
+
+
+
+
+/* .followme-button {
   max-width: 160px;
   height: 48px;
   display: flex;
@@ -246,7 +350,9 @@
   font-family: arima;
   font-size: 1rem;
   color: rgba(78, 164, 135, 1);
-}
+} */
+
+
 
 @media screen and (min-width: 768px) and (max-width: 1200px) {
   .headarticle {
