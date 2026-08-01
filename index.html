@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="./styles/variables.css" />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="style-media.css">
-    <link rel="stylesheet" href="style-animation.css">
+  <link rel="stylesheet" href="style-animation.css">
 </head>
 
 <body>
@@ -174,42 +174,56 @@
             <img src="./assets/icons/person_pin.png" alt="Icon person-pin" />
             <h2>Contact form</h2>
           </div>
+          <div class="contact-section-description">
           <p>Have a question or an idea to collaborate?</p>
           <p>
             Get in touch—I'd love to hear from you and explore how we can work
             together.
           </p>
+          </div>
         </div>
         </div>
         <form class="contact-form-input" action="">
           <div class="cfi-row">
             <div class="cfi-container">
-              <label for="cfi-name">What's your name?</label><br />
-              <input type="text" id="cfi-name" name="cfi-name" />
+              <label class="cfi-container-lbltxt" for="cfi-name">What's your name?</label><br />
+              <input class="cfi-container-itxt" type="text" id="cfi-name" name="cfi-name" />
             </div>
             <div class="cfi-container">
-              <label for="cfi-email">What's your email?</label><br />
+              <label class="cfi-container-lbltxt" for="cfi-email">What's your email?</label><br />
               <input type="text" id="cfi-email" name="cfi-email" />
             </div>
           </div>
           <div class="cfi-row">
             <div class="cfi-container">
-              <label for="cfi-question">How can I help?</label><br />
+              <label class="cfi-container-lbltxt" for="cfi-question">How can I help?</label><br />
               <input type="text" id="cfi-question" name="cfi-question" />
             </div>
           </div>
+
+
+
+
           <div class="cfi-send">
             <div class="cfi-check">
-              <input type="checkbox" id="cfi-check" name="cfi-check" />
-              <p>
-                I've read the
-                <a href="privacy policy.html" target="_blank">privacy policy</a>
-                and agree to the processing of my data as outlined.
-              </p>
+              <input class="cfi-ckeckbox" type="checkbox" id="cfi-check" name="cfi-check" required />
+              <div class="cfi-check-lblcontainer">
+                <label for="cfi-check">
+                  I've read the privacy policy and agree to the processing of my data as outlined.
+                </label>
+                <p>
+                  I've read the <a id="cfi-pp-txtformat" href="cookiepreferences.html">privacy policy</a> and agree to
+                  the processing of my data as outlined.
+                </p>
+              </div>
             </div>
-
-            <button type="submit" value="Send">Send</button>
+            <p class="cfi-check-ignored">Please accept the privacy policy.</p>
+            <button class="cfi-send-button" type="submit" value="Send">Send</button>
           </div>
+
+
+
+
         </form>
       </section>
   </main>

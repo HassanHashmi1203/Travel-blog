@@ -1,7 +1,7 @@
 * {
   margin: 0;
   box-sizing: border-box;
-  font-family: "Iceland";
+  font-family: Palanquin;
   scroll-behavior: smooth;
 }
 
@@ -45,14 +45,26 @@ h4 {
   margin-bottom: 24px;
 }
 
-.standard-headline > img {
+.standard-headline>img {
   width: clamp(40px, 28px + 2.5vw, 48px);
   height: auto;
 }
 
-.standard-headline > h2 {
+.standard-headline>h2 {
   font-family: arima;
   font-size: clamp(2.5rem, 1.25rem + 4vw, 3.25rem);
   color: rgba(78, 164, 135, 1);
   font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+
+@media screen and (max-width: 768px) {
+  .standard-headline {
+    gap: 0.5rem;
+  }
+
+  .standard-headline>h2 {
+    letter-spacing: -0.04em;
+  }
 }

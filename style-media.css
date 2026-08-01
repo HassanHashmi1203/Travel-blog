@@ -14,18 +14,6 @@
 
 }
 
-@media (max-width:480px) {
-  .landing-section-vector {
-    transform: translateX(-100px);
-    width: 240px;
-  }
-
-  .landing-layer04 {
-    padding-top: 90px;
-    padding-left: 40px;
-  }
-}
-
 @media screen and (max-width: 1024px) {
 
   .landing-layer03 {
@@ -61,12 +49,13 @@
 }
 
 @media screen and (max-width: 768px) {
-  .nav-links>a {
+  .nav-links {
     display: none;
   }
 
   .header-navigation {
     justify-content: center;
+    padding-inline: 16px;
   }
 
   .contact-section-description {
@@ -103,5 +92,17 @@
     align-items: center;
     gap: 48px;
     padding: 24px;
+  }
+}
+
+@media (max-width:480px) {
+  .landing-section-vector {
+    transform: translateX(-100px);
+    width: 240px;
+  }
+
+  .landing-layer04 {
+    padding-top: 90px;
+    padding-left: 40px;
   }
 }

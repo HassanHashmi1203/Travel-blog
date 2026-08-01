@@ -11,19 +11,20 @@ header {
   justify-content: center;
 }
 
-.logo {
-  width: 72px;
-  height: 72px;
-}
-
 .header-navigation {
   width: 100%;
   max-width: 1200px;
   padding: 0px 32px;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  gap: 102px;
+  justify-content: center;
+  gap: 100px;
+  margin-inline: auto;
+}
+
+.logo {
+  width: 72px;
+  height: 72px;
 }
 
 .nav-links {
@@ -244,16 +245,6 @@ header {
   height: 100%;
 }
 
-
-
-
-
-
-
-
-
-
-
 main {
   width: min(100%, 1200px);
   margin-inline: auto;
@@ -308,13 +299,6 @@ main {
   z-index: 4;
   cursor: pointer;
 }
-
-/* .slider-a-wrapper {
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  position: relative;
-} */
 
 .slider-a-element {
   position: absolute;
@@ -436,6 +420,7 @@ main {
 }
 
 .faq-item {
+  cursor: pointer;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -443,7 +428,28 @@ main {
   gap: 8px;
   border-radius: 12px;
   background-color: rgba(241, 201, 83, 1);
+  interpolate-size: allow-keywords;
 }
+
+
+.faq-item::details-content {
+  block-size: 0;
+  opacity: 0;
+  overflow: clip;
+  transition:
+    block-size 2.35s ease-in,
+    opacity 1.25s ease,
+    content-visibility 0.35s allow-discrete;
+}
+
+.faq-item[open]::details-content {
+  block-size: auto;
+  opacity: 1;
+}
+
+
+
+
 
 .faq-item-sum {
   font-family: var(--maintextfamily);
@@ -517,7 +523,7 @@ main {
 }
 
 .contact-section-description>p {
-  font-family: palanquin;
+  font-family: Palanquin;
   font-size: 1.5rem;
   color: rgba(84, 55, 13, 1);
   font-weight: 500;
@@ -531,7 +537,7 @@ main {
   gap: 16px;
 }
 
-.contact-form-input label {
+.cfi-container-lbltxt {
   font-family: var(--maintextfamily);
   font-size: 1.5rem;
   color: rgba(84, 55, 13, 1);
@@ -543,9 +549,10 @@ main {
   border-bottom: 1px solid rgba(84, 55, 13, 1);
   width: 100%;
   margin: 17px 0px;
-  font-family: var(--inputtextfamily);
+  font-family: Palanquin;
   font-size: 1.5rem;
-  font-weight: bold;
+  font-weight: 500;
+  color: rgba(78, 164, 135, 1);
 }
 
 .cfi-container {
@@ -559,20 +566,30 @@ main {
   gap: 48px;
 }
 
+.cfi-send {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 32px;
+}
+
 .cfi-check {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding-bottom: 1.5rem;
+  display: grid;
+  grid-template-columns: 32px 1fr;
+  column-gap: 16px;
+  align-items: start;
+  justify-content: center;
 }
 
 .cfi-check input[type="checkbox"] {
   appearance: none;
-  width: 18px;
-  height: 18px;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
   border: 2px solid rgba(84, 55, 13, 1);
   border-radius: 2px;
   background: #fff;
+  justify-self: center;
+  align-self: center;
 }
 
 .cfi-check input[type="checkbox"]:hover {
@@ -583,27 +600,63 @@ main {
   background: rgba(78, 164, 135, 1);
 }
 
-.cfi-check input[type="checkbox"]:checked::before {
-  content: url("./assets/icons/check.svg");
-  width: 15px;
-  height: 12px;
+.cfi-check input[type="checkbox"]:checked::after {
+  content:"";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image:url("./assets/icons/check.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
-.cfi-check p {
-  font-family: var(--maintextfamily);
+.cfi-check-lblcontainer {
+  position: relative;
+}
+
+.cfi-check-lblcontainer label {
+  position: absolute;
+  inset: 0;
+  height: 1px;
+  width: 1px;
+  padding: 0;
+  margin: -1px;
+  border: none;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.cfi-check-lblcontainer p {
+  font-family: Palanquin;
   font-size: 1rem;
   font-weight: 400;
+  line-height: 1.1;
   color: rgba(84, 55, 13, 1);
 }
 
-.cfi-send {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 32px;
+.cfi-check-lblcontainer a {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  color: rgba(78, 164, 135, 1);
+  text-decoration: none;
 }
 
-.cfi-send button {
+.cfi-check-ignored {
+  display: none;
+  font-family: Palanquin;
+  font-size: 1rem;
+  font-weight: 500;
+  color: rgba(185, 16, 47, 1);
+  transform: translate(4px, -140px);
+}
+
+
+.cfi-send-button {
+  justify-self: center;
+
   width: 139px;
   height: 48px;
   border-radius: 40px;
@@ -616,6 +669,14 @@ main {
   color: rgba(115, 115, 115, 1);
 }
 
+.cfi-send:has(#cfi-check:checked) .cfi-send-button {
+  background: rgba(78, 164, 135, 1);
+  border: none;
+  color: rgba(241, 201, 83, 1);
+  cursor: pointer;
+}
+
+
 .foot {
   width: 100%;
   background-color: rgba(78, 164, 135, 1);
@@ -626,8 +687,7 @@ main {
 }
 
 .foot-content {
-  width: 100%;
-  max-width: 1200px;
+  width: min(100%, 1200px);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -659,6 +719,7 @@ main {
 
 .foot-content-left a {
   font-family: palanquin;
+  text-decoration: none;
   font-size: 1rem;
   color: white;
 }
