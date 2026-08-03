@@ -1,6 +1,6 @@
 main {
     margin-top: 200px;
-    margin-bottom: 48px;
+    margin-bottom: 200px;
     width: min(100%, 1440px);
     margin-inline: auto;
     display: flex;
@@ -33,7 +33,7 @@ main h3 {
 @media screen and (max-width: 768px) {
     main {
     margin-top: 200px;
-    margin-bottom: 24px;
+    margin-bottom: 300px;
     gap: 32px;
     padding-inline: 1rem;
 }

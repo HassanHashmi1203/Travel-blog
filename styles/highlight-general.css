@@ -186,6 +186,7 @@
 .followme {
   position: relative;
   padding: 4px;
+  margin-bottom: 140px;
 }
 
 .followme-content {
@@ -400,6 +401,10 @@
 .protipps-marker img {
   transform: scale(0.8);
   rotate: 10deg;
+}
+
+.followme{
+  margin-bottom: 220px;
 }
 
   .followme-content {

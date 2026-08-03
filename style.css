@@ -489,6 +489,7 @@ main {
   flex-direction: column;
   align-items: center;
   padding: 8px;
+  margin-bottom: 160px;
 }
 
 .contact-section-head {
@@ -849,6 +850,10 @@ main {
     padding-inline: 16px;
   }
 
+  .contact-section {
+    margin-bottom: 280px;
+  }
+
   .contact-section-description {
     display: none;
   }
@@ -898,9 +903,9 @@ main {
 
 @media (max-width:480px) {
 
-.foot-content-right {
-  grid-template-columns: repeat(2, 1fr);
-}
+  .foot-content-right {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 
